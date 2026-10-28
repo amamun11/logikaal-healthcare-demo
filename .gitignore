@@ -1,0 +1,40 @@
+/.phpunit.cache
+/.phpunit.result.cache
+/.rnd
+/node_modules
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.env.production
+.phpactor.json
+.phpunit.result.cache
+Homestead.json
+Homestead.yaml
+auth.json
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.vscode
+
+# runtime logs
+/storage/logs/*.log
+/storage/oauth-private.key
+/storage/oauth-public.key
+
+# local demo credentials and helper scripts; never publish reviewer passwords
+/storage/app/*logins*.csv
+/storage/app/update-local-logins.php
+
+# generated Laravel runtime files and private uploads
+/bootstrap/cache/*.php
+/storage/framework/cache/data/*
+/storage/framework/sessions/*
+/storage/framework/testing/*
+/storage/framework/views/*
+/storage/app/private/*
+/storage/app/public/*

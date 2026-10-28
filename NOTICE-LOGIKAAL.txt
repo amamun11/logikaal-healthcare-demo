@@ -1,0 +1,10 @@
+Logikaal healthcare customization notice
+
+This copy of the hospital application has been customized for Logikaal healthcare.
+Copyright (c) 2026 Logikaal healthcare applies to the original additions and
+modifications made for this customization.
+
+The upstream application and third-party components retain their respective
+copyrights, notices, and licenses. The GNU General Public License text in LICENSE
+is reproduced verbatim and continues to apply to the upstream application where
+its authors designated it. This notice does not replace or amend that license.

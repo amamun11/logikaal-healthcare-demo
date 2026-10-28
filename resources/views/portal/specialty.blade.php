@@ -1,0 +1,5 @@
+@extends('portal.layout')
+@section('title', $name)
+@section('content')
+<div class="container content"><p><a href="{{ url('/specialties') }}">← All specialities</a></p><span class="eyebrow">Department</span><h1 style="font-size:42px">{{ $name }}</h1><p class="muted">Doctor profiles currently listed for this department.</p><div class="grid">@foreach($doctors as $doctor)<article class="card doctor-card"><div class="doctor-top"></div><div class="inner"><h2 style="font-size:21px">{{ $doctor->name }}</h2><p class="muted">{{ $doctor->profile ?: 'Credentials pending confirmation' }}</p><p class="muted">Floor {{ $doctor->chamber_floor ?: '—' }} · Room {{ $doctor->chamber_room ?: '—' }}</p><a class="btn btn-soft btn-small" href="{{ url('/find-doctor/'.$doctor->id) }}">View profile →</a></div></article>@endforeach</div>@include('portal.pagination', ['items'=>$doctors])<div class="disclosure" style="margin-top:22px">Prototype listing only. Confirm the doctor's qualifications, employment and chamber schedule with the hospital before publishing real appointment availability.</div></div>
+@endsection

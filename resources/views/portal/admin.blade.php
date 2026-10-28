@@ -1,0 +1,11 @@
+@extends('portal.layout')
+@section('title', 'Schedules and bookings')
+@section('content')
+<h1>Schedules &amp; bookings</h1><p class="muted">Manage doctors and see who booked each chamber. All times are in {{ config('app.timezone') }}.</p>
+<div class="row"><a class="btn" href="{{ url('/doctors/create') }}">Add a doctor</a><a class="btn secondary" href="{{ url('/appointments') }}">Manage appointments</a></div>
+<h2>Doctor directory</h2><div class="grid">@forelse($doctors as $doctor)<section class="card"><h3>{{ $doctor->name }}</h3>@include('portal.schedule')<p class="muted">Doctor login: {{ $doctor->user_id ? 'Linked' : 'Not created' }}</p><a class="btn secondary" href="{{ url('/portal/admin/doctors/'.$doctor->id) }}">Profile, hours &amp; login</a></section>@empty<section class="card">Add your first doctor, then set their chamber hours and login.</section>@endforelse</div>
+<h2 style="margin-top:36px">All doctor appointments</h2><form method="get" class="row"><div><label for="date">Date</label><input id="date" type="date" name="date" value="{{ $date }}" required></div><div><label for="doctor">Doctor</label><select id="doctor" name="doctor"><option value="">All doctors</option>@foreach($doctors as $doctor)<option value="{{ $doctor->id }}" @selected((string)request('doctor') === (string)$doctor->id)>{{ $doctor->name }} — {{ $doctor->department }}</option>@endforeach</select></div><button>View bookings</button></form>
+<section class="card scroll"><table><thead><tr><th>Time</th><th>Doctor / department</th><th>Patient</th><th>Phone</th><th>Status</th><th></th></tr></thead><tbody>
+@forelse($appointments as $appointment)@php($doctor = $doctors->get($appointment->doctor))@php($patient = $patients->get($appointment->patient))<tr><td>{{ $appointment->time_slot }}</td><td>{{ $doctor?->name ?? 'Unavailable' }}<br>{{ $doctor?->department }}</td><td>{{ $patient?->name ?? 'Unavailable' }}<br>{{ $patient?->patient_id }}</td><td>{{ $patient?->phone }}</td><td>{{ ucfirst($appointment->status) }}</td><td><a href="{{ url('/appointments/'.$appointment->id) }}">Details →</a></td></tr>
+@empty<tr><td colspan="6" class="empty">No appointments for this filter.</td></tr>@endforelse</tbody></table>@include('portal.pagination', ['items'=>$appointments])</section>
+@endsection

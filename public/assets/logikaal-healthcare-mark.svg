@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Logikaal healthcare symbol</title>
+  <desc id="desc">A teal healthcare cross joined with a rising pulse and leaf.</desc>
+  <defs><linearGradient id="g" x1="12" y1="12" x2="82" y2="84" gradientUnits="userSpaceOnUse"><stop stop-color="#15a99a"/><stop offset="1" stop-color="#087d73"/></linearGradient></defs>
+  <rect x="4" y="4" width="88" height="88" rx="26" fill="#e8f6f3"/>
+  <path d="M42 19h12a5 5 0 0 1 5 5v13h13a5 5 0 0 1 5 5v12a5 5 0 0 1-5 5H59v13a5 5 0 0 1-5 5H42a5 5 0 0 1-5-5V64H24a5 5 0 0 1-5-5V47a5 5 0 0 1 5-5h13V24a5 5 0 0 1 5-5Z" fill="url(#g)"/>
+  <path d="M20 51h16l7-12 9 27 8-17 5 8h11" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+</svg>
