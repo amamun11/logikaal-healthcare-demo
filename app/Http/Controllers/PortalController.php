@@ -160,6 +160,32 @@ class PortalController extends Controller
         return view('portal.tests', compact('tests'));
     }
 
+    public function healthPackages()
+    {
+        $packages = [
+            [
+                'name' => 'General Wellness Check',
+                'summary' => 'An example format for a routine health review, with final tests selected according to the patient’s needs.',
+                'includes' => ['Clinician review', 'Core laboratory tests selected by the hospital', 'Preparation guidance before testing'],
+                'price' => 2500,
+            ],
+            [
+                'name' => 'Heart Health Check',
+                'summary' => 'An example heart-health assessment format. A clinician should confirm which checks are appropriate.',
+                'includes' => ['Clinical assessment', 'Relevant diagnostic checks selected by the clinician', 'Follow-up guidance'],
+                'price' => 3200,
+            ],
+            [
+                'name' => 'Metabolic Health Check',
+                'summary' => 'An example package format for discussing metabolic health with a qualified clinician.',
+                'includes' => ['Clinical assessment', 'Relevant laboratory checks selected by the clinician', 'Result review guidance'],
+                'price' => 2800,
+            ],
+        ];
+
+        return view('portal.health-packages', compact('packages'));
+    }
+
     public function testCatalogue()
     {
         $this->role('Admin');

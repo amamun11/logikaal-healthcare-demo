@@ -10,6 +10,22 @@ class PortalTest extends TestCase
 {
     use RefreshDatabase;
 
+    public function test_patient_visitor_guide_is_public_and_includes_visit_and_safety_information(): void
+    {
+        $this->get('/patient-guide')->assertOk()
+            ->assertSee('Patient &amp; visitor guide', false)
+            ->assertSee('Check in at reception')
+            ->assertSee('Do not wait for an online appointment');
+    }
+
+    public function test_health_package_examples_are_public_and_marked_as_illustrative(): void
+    {
+        $this->get('/health-packages')->assertOk()
+            ->assertSee('General Wellness Check')
+            ->assertSee('Illustrative examples:')
+            ->assertSee('not approved Logikaal healthcare services or rates');
+    }
+
     public function test_live_status_is_private_writable_only_by_own_doctor_and_expires_daily(): void
     {
         $doctor = $this->doctor();

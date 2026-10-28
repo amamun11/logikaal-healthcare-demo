@@ -529,6 +529,8 @@ Route::get('/specialties', [\App\Http\Controllers\PortalController::class, 'spec
 Route::get('/specialties/{name}', [\App\Http\Controllers\PortalController::class, 'specialty'])->name('public.specialties.show');
 Route::get('/appointment-info', [\App\Http\Controllers\PortalController::class, 'appointmentInfo'])->name('public.appointments');
 Route::get('/contact', [\App\Http\Controllers\PortalController::class, 'contact'])->name('public.contact');
+Route::view('/patient-guide', 'portal.patient-guide')->name('public.patient-guide');
+Route::get('/health-packages', [\App\Http\Controllers\PortalController::class, 'healthPackages'])->name('public.health-packages');
 Route::get('/tests', [\App\Http\Controllers\PortalController::class, 'tests'])->name('public.tests');
 Route::get('/portal/chamber/{doctor}', [\App\Http\Controllers\ChamberStatusController::class, 'show'])->middleware('auth');
 Route::post('/portal/chamber-status', [\App\Http\Controllers\ChamberStatusController::class, 'update'])->middleware('auth');

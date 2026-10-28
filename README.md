@@ -5,12 +5,14 @@ includes separate patient, doctor, and administrator areas, online chamber booki
 doctor availability updates, and a public diagnostic test price list.
 
 The public site includes a hospital landing page, specialities, doctor search, appointment
-information, a test catalogue, and location/directions for Laxmipur, Rajpara, Rajshahi
-6000. Its original Logikaal healthcare mark is at `public/assets/logikaal-healthcare-mark.svg`.
+information, a patient and visitor guide, example health-check packages, a test catalogue,
+and location/directions for Laxmipur, Rajpara, Rajshahi 6000. Its original Logikaal
+healthcare mark is at
+`public/assets/logikaal-healthcare-mark.svg`.
 
 ## Project links
 
-- Public demo: <https://logikaal-healthcare.infinityfreeapp.com>
+- Public preview: <https://logikaal-healthcare.infinityfreeapp.com>
 - Full user guide: [docs/USER-GUIDE.md](docs/USER-GUIDE.md)
 - Patient, doctor, and admin guide: [docs/patient-doctor-portals.md](docs/patient-doctor-portals.md)
 
@@ -37,16 +39,20 @@ shared file or commit `.env`.
   or finished).
 - Administrator view of doctors and appointments across the hospital.
 - Public diagnostic test prices, room/floor information, and date-limited discounts.
+- Patient and visitor guide with appointment preparation, check-in steps, FAQs, and clear
+  notes for hospital policies that still need confirmation.
+- Health-check package examples at `/health-packages`; example contents and prices are
+  explicitly marked as unapproved pending hospital and clinician review.
 - Bangladesh time (`Asia/Dhaka`) throughout appointment and chamber workflows.
 
 Public Rajshahi provider prices linked from the test catalogue are comparison samples, not
 Logikaal healthcare's official rates. The doctor profiles in the prototype also need
 hospital confirmation; they do not claim affiliation based on online directory records.
 
-## Demo data and credentials
+## Preview records and credentials
 
-Sample data is for review only. The live demo's reviewer usernames and passwords are
-kept in a private local file; they are intentionally not published in this repository.
+Sample information is for review only. The hosted preview's reviewer usernames and
+passwords are kept in a private local file; they are intentionally not published here.
 Replace sample names, schedules, credentials, and test prices with hospital-approved
 information before real use. Never use sample accounts for patient care.
 

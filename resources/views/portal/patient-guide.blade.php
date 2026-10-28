@@ -1,0 +1,25 @@
+@extends('portal.layout')
+@section('title', 'Patient & visitor guide')
+@section('content')
+<section class="hero"><div class="container"><div class="hero-copy"><span class="eyebrow">Before you visit</span><h1 style="font-size:42px">Patient &amp; visitor guide</h1><p class="muted">A few simple steps can help you prepare for a planned appointment in Rajpara, Rajshahi.</p><div class="hero-actions"><a class="btn" href="{{ url('/find-doctor') }}">Find a doctor →</a><a class="btn btn-outline" href="{{ url('/contact') }}">Address &amp; directions</a></div></div></div></section>
+<div class="container content">
+    <section class="section" aria-labelledby="before-visit"><div class="section-head"><div><span class="eyebrow">Your visit</span><h2 id="before-visit">Before you arrive</h2><p class="muted">For a planned visit, use these general preparation steps.</p></div></div><div class="grid">
+        <article class="card"><span class="badge">01 · Plan</span><h3 style="margin-top:15px">Choose a service</h3><p class="muted">Browse the specialty and doctor information. Check the published chamber time and live status before travelling.</p><a href="{{ url('/find-doctor') }}">Search doctors →</a></article>
+        <article class="card"><span class="badge">02 · Book</span><h3 style="margin-top:15px">Request an appointment</h3><p class="muted">Sign in or create a patient account, select an available time, and review your booking in the patient portal.</p><a href="{{ url('/appointment-info') }}">Appointment steps →</a></article>
+        <article class="card"><span class="badge">03 · Prepare</span><h3 style="margin-top:15px">Bring useful information</h3><p class="muted">If available, bring previous prescriptions, relevant reports, a list of medicines, and an identity document. Ask the hospital if a specific document is required.</p></article>
+    </div></section>
+
+    <section class="section" aria-labelledby="arrival"><div class="contact-grid"><article class="card"><span class="eyebrow">When you arrive</span><h2 id="arrival">Check in at reception</h2><p class="muted">Allow time to reach the hospital and confirm your appointment with reception. If you are delayed or cannot attend, contact the hospital as soon as its verified contact details are available.</p><ul class="info-list"><li><strong>Listed location</strong><br>Laxmipur, Rajpara, Rajshahi 6000</li><li><strong>Appointment time zone</strong><br>Bangladesh time (Asia/Dhaka)</li><li><strong>Directions</strong><br><a href="{{ url('/contact') }}">Open address and map directions →</a></li></ul></article><article class="card"><span class="eyebrow">Visitors &amp; companions</span><h2>Check current arrangements</h2><p class="muted">Visitor hours, companion limits, accessibility facilities, admission procedures, and payment methods have not been confirmed for publication. Please check these details with the hospital before travelling or planning an admission.</p><a class="btn btn-soft btn-small" href="{{ url('/contact') }}">Contact information →</a></article></div></section>
+
+    <section class="section" aria-labelledby="faq"><span class="eyebrow">Helpful answers</span><h2 id="faq">Frequently asked questions</h2><div class="grid" style="margin-top:20px">
+        <article class="card"><h3>How do I book?</h3><p class="muted">Browse doctors, open a profile, sign in as a patient, and request one of the available chamber times. Your portal shows your appointments.</p></article>
+        <article class="card"><h3>What should I bring?</h3><p class="muted">Bring relevant earlier prescriptions and reports if you have them. The hospital can confirm any required documents for your visit.</p></article>
+        <article class="card"><h3>Do I need to prepare before a test?</h3><p class="muted">Preparation depends on the specific test. Follow instructions provided by the hospital or your clinician; check with them if you are unsure.</p><a href="{{ url('/tests') }}">Browse tests and prices →</a></article>
+        <article class="card"><h3>Can I check for a delay?</h3><p class="muted">The doctor’s chamber page may show a current status or announced delay. Check it shortly before leaving, as schedules can change.</p><a href="{{ url('/find-doctor') }}">Open doctor directory →</a></article>
+        <article class="card"><h3>Where can I find visitor hours or phone numbers?</h3><p class="muted">Those hospital-specific details are not yet confirmed here. Please verify them with the hospital before your visit.</p><a href="{{ url('/contact') }}">See contact and directions →</a></article>
+        <article class="card"><h3>What if this is an emergency?</h3><p class="muted">Do not wait for an online appointment or a website reply. Contact local emergency services or go to the nearest emergency department.</p></article>
+    </div></section>
+
+    <div class="disclosure">This guide provides general visit-planning information, not medical advice. Hospital-specific visitor rules, facilities, required documents, fees, and contact details must be confirmed by Logikaal healthcare before publication as official policy.</div>
+</div>
+@endsection

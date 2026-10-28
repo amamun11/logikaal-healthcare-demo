@@ -30,6 +30,6 @@ For the full Logikaal healthcare guide, see [USER-GUIDE.md](USER-GUIDE.md).
 
 ## Time and sample data
 
-Appointment and chamber times use `Asia/Dhaka`. Sample records in the demo are not
-verified hospital information. Replace them before real use. Online demo credentials are
+Appointment and chamber times use `Asia/Dhaka`. Sample records in the preview are not
+verified hospital information. Replace them before real use. Online preview credentials are
 kept in a private local file and are not published in this guide.

@@ -1,10 +1,10 @@
 # Logikaal healthcare user guide
 
-This guide covers the features currently set up for Logikaal healthcare. The online
-demo is at <https://logikaal-healthcare.infinityfreeapp.com>. The local development
+This guide covers the features currently set up for Logikaal healthcare. The public
+preview is at <https://logikaal-healthcare.infinityfreeapp.com>. The local development
 site runs at <http://127.0.0.1:8001> when the Laravel server is running.
 
-The demo contains sample records. Doctor qualifications, chamber details, test prices,
+The preview contains sample records. Doctor qualifications, chamber details, test prices,
 and patient information must be checked and replaced with hospital-approved data before
 real use.
 
@@ -18,6 +18,8 @@ The public website now has these pages:
 - Appointment information: `/appointment-info`
 - Tests & prices: `/tests`
 - Address and directions: `/contact`
+- Patient & visitor guide and FAQs: `/patient-guide`
+- Health-check package examples: `/health-packages`
 
 The listed address is Laxmipur, Rajpara, Rajshahi 6000, Bangladesh. The public doctor
 cards are prototype records: online directories for other hospitals are not proof that
@@ -35,7 +37,7 @@ The site offers three separate sign-in pages:
 - Admin: `/admin/login`
 
 The online review accounts and their current passwords are stored in a private local
-CSV file. Use that file for demo sign-in; do not put its passwords in this guide or
+CSV file. Use that file for preview sign-in; do not put its passwords in this guide or
 send them in a public link. For a locally seeded development database, use the local
 credentials saved for the project. Local and online passwords are separate.
 
@@ -125,7 +127,7 @@ editing a password directly in the database.
 
 ## Understanding the database
 
-The local development app and hosted demo each use their own MySQL database. Changes
+The local development app and hosted preview each use their own MySQL database. Changes
 made in phpMyAdmin or MySQL Workbench affect only the database connection you selected;
 they do not automatically copy between local and online environments.
 
@@ -136,14 +138,14 @@ protect appointment availability. Use phpMyAdmin to view table structure and row
 to take a backup. Avoid changing password hashes or deleting linked records directly.
 Export a database backup before any manual database change.
 
-## Known limits in this demo
+## Known limits in this preview
 
 - Doctor schedules repeat weekly and allow one daily chamber interval. Date-specific
   leave and multiple shifts in one day are not included yet.
 - There is no password recovery or email/phone verification flow yet.
-- Sample doctors, qualifications, patients, and test prices are for demonstration and
+- Sample doctors, qualifications, patients, and test prices are for presentation and
   should be replaced with verified hospital data.
-- The free demo host is for review. Confirm its current limits and make backups before
+- The free preview host is for review. Confirm its current limits and make backups before
   relying on it for ongoing work.
 
 ## Local development commands
