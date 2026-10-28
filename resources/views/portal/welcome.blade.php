@@ -1,6 +1,12 @@
 @extends('portal.layout')
 @section('title', 'Healthcare in Rajshahi')
 @section('content')
+@php
+    // Keep the public homepage usable while an older deployed controller is being updated.
+    $departments = $departments ?? collect();
+    $doctors = $doctors ?? collect();
+    $testCount = $testCount ?? 0;
+@endphp
 <section class="hero">
     <div class="container hero-grid">
         <div class="hero-copy">
